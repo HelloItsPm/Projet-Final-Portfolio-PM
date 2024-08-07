@@ -1,0 +1,23 @@
+:root {
+    --first-color: #3498db;
+    --second-color: #e74c3c;
+}
+
+.outletContainer{
+    background-color: #16151C;
+    padding: 32px 128px;
+    font-family: "Inter", sans-serif;
+    line-height: auto;
+}
+
+@media all and (max-width: 900PX) {
+    .outletContainer {
+        padding: 32px 32px;
+    }
+}
+
+@media all and (max-width: 600PX) {
+    .outletContainer {
+        padding: 0p;
+    }
+}

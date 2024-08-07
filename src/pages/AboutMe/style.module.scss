@@ -1,0 +1,96 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    padding: 200px 170px;
+    gap: 60px;
+    color: #fff;
+    .subContainerFirst{
+        display: flex;
+        padding: 0px 32px;
+        gap: 48px;
+        align-items: center;
+        .subContainerImg{
+            height: 220px;
+            width: 220px;
+            background-color: bisque;
+            border-radius: 50%;
+        }
+        .subContainerInfos{
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+            .subContainerInfosPlus{
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+                .title{
+                    margin: 0px;
+                    padding: 0px;
+                    font-size: 40px;
+                    font-weight: bold;
+                }
+                .nameTitle{
+                    margin: 0px;
+                    padding: 0px;
+                    color: #CFCFCF;
+                    font-size: 20px;
+                }
+                .txt{
+                    margin: 0px;
+                    padding: 0px;
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+    .subContainerSecond{
+        display: flex;
+        flex-direction: column;
+        padding: 0px 32px;
+        gap: 60px;
+        .subContainerGlobal {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            .txtTitle{
+                font-size: 24px;
+                font-weight: bold;
+            }
+            .subContainerSoftware{
+                display: flex;
+                flex-wrap: wrap;
+                gap: 40px;
+                justify-content: flex-start;
+
+                .softwareContainer{
+                    display: flex;
+                    flex-direction: column;
+                    padding: 16px 24px;
+                    gap: 16px;
+                    width: 140px;
+                    height: 160px;
+                    border: 2px solid #fff;
+                    .logo{
+                        height: 100px;
+                        width: auto;
+                        max-width: 100%; /* S'assure que l'image ne dépasse pas le conteneur */
+                        align-self: center; /* Centre l'image dans le conteneur flex */
+                    }
+                    .softwareName{
+                        margin: 0px;
+                        padding: 0px;
+                        align-self: center;
+                        font-size: 16px;
+                        font-weight: bold;
+                    }
+                    .softwareLevel{
+                        margin: 0px;
+                        padding: 0px;
+                        align-self: center;
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+}

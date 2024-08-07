@@ -1,0 +1,17 @@
+.container{
+    padding: 200px 120px;
+    display: flex;
+    justify-content: center;
+}
+
+@media all and (max-width: 900PX) {
+    .container {
+        padding: 160px 120px;
+    }
+}
+
+@media all and (max-width: 600PX) {
+    .container {
+        padding: 132px 0px 60px 0px;
+    }
+}

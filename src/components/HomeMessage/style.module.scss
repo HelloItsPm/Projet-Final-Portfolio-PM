@@ -1,0 +1,52 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    .title{
+        font-size: 64px;
+        color: #fff;
+        font-weight: 400;
+        margin-bottom: -16px;
+    }
+    .subContainer {
+        display: flex;
+        padding: 0px 24px;
+        gap: 24px;
+        width: 560px;
+
+        .line{
+            height: auto;
+            width: 2px;
+            background-color: aqua;
+        }
+        .txt {
+            font-size: 16px;
+            color: #fff;
+            font-weight: 100;
+        }
+    }
+}
+
+
+@media all and (max-width: 900PX) {
+    .container {
+        .subContainer {
+            width: 480px;
+        }
+    }
+}
+
+@media all and (max-width: 600PX) {
+    .container {
+        .title{
+            font-size: 48px;
+        }
+        .subContainer {
+            display: flex;
+            padding: 0px 16px;
+            gap: 16px;
+            width: 232px;
+        }
+    }
+}
