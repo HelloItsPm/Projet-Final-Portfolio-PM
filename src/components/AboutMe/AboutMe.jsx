@@ -119,7 +119,7 @@ const AboutMe = () => {
                         <div className={s.softwareContainer}>
                             <img src={blender} alt="logo Blender" className={s.logo} />
                             <p className={s.softwareName}>Blender</p>
-                            <p className={s.softwareLevel}>Paratique moyenne</p>
+                            <p className={s.softwareLevel}>Pratique moyenne</p>
                         </div>
                         <div className={s.softwareContainer}>
                             <img src={zbrush} alt="logo Zbrush" className={s.logo} />
