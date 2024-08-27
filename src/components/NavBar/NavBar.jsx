@@ -1,21 +1,28 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import s from './style.module.scss';
 
-const NavBar = () => {
+const NavBar = ({ onSelectComponent }) => {
+    const navigate = useNavigate();
+
+    const handleNavigation = (component) => {
+        onSelectComponent(component); // Met à jour le composant sélectionné
+        navigate('/'); // Redirige vers la page d'accueil
+    };
+
     return (
         <div className={s.container}>
-            <div className={s.itemNavBar}>
-                <Link to='/resume'>Curriculum Vitae</Link>
+            <div className={s.itemNavBar} onClick={() => handleNavigation('Portfolio')}>
+                Portfolio
             </div>
-            <div className={s.itemNavBar}>
-            <Link to='/portfolio'>Portfolio</Link>
+            <div className={s.itemNavBar} onClick={() => handleNavigation('Resume')}>
+                CV
             </div>
-            <div className={s.itemNavBar}>
-            <Link to='/aboutme'>À propos</Link>
+            <div className={s.itemNavBar} onClick={() => handleNavigation('AboutMe')}>
+                À propos
             </div>
         </div>
     );
 };
 
-export default NavBar
+export default NavBar;

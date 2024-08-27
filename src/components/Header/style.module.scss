@@ -1,0 +1,72 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    background-color: #16151C;
+    margin-bottom: -128px;
+    z-index: 2;
+
+    .container1{
+        width: 100%;
+        position: relative;
+        .cadre1{
+            position: absolute;
+            display: block;
+        }
+        .cadre2{
+            position: absolute;
+            display: none;
+        }
+        .cadre3{
+            position: absolute;
+            display: none;
+        }
+    }
+    .logo {
+        cursor: pointer;
+    }
+    .container2{
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        .navBar{
+            display: flex;
+        }
+        .menuBurger{
+            display: none;
+        }
+    }
+}
+
+@media all and (max-width: 900PX) {
+    .header{
+        .container1{
+            .cadre1{
+                display: none;
+            }
+            .cadre2{
+                display: block;
+            }
+        }
+        .container2{
+            .navBar{
+                display: none;
+            }
+            .menuBurger{
+                display: block;
+            }
+        }
+    }
+}
+
+@media all and (max-width: 600PX) {
+    .header{
+        .container1{
+            .cadre2{
+                display: none;
+            }
+            .cadre3{
+                display: block;
+            }
+        }
+    }
+}

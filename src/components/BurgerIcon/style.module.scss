@@ -1,0 +1,43 @@
+.burgerIcon {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.bar {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background-color: #000;
+    border-radius: 1.5px;
+}
+
+.bar1 {
+    top: 0; /* Position initiale */
+}
+
+.bar2 {
+    top: 10px; /* Position initiale */
+}
+
+.bar3 {
+    top: 20px; /* Position initiale */
+}
+
+.burgerIcon.active .bar1 {
+    transform: rotate(45deg) translate(5px, -6px);
+    top: 10px; /* Ajuste la position pour le croisement */
+}
+
+.burgerIcon.active .bar2 {
+    opacity: 0; /* Caché lorsqu'on affiche la croix */
+}
+
+.burgerIcon.active .bar3 {
+    transform: rotate(-45deg) translate(-10px, -1px);
+    top: 10px; /* Ajuste la position pour le croisement */
+}

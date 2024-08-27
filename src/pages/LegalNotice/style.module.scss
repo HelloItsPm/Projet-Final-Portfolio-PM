@@ -43,23 +43,24 @@
 
 @media all and (max-width: 900PX) {
     .container {
-        padding: 160px 80px 80px 80px;
+        display: flex;
+        padding: 160px 32px 80px 32px;
     }
 }
 
 @media all and (max-width: 600PX) {
     .container {
-        padding: 16px 16px 8px 16px;
+        padding: 160px 16px 8px 16px;
         .mainTitle {
             font-size: 32px;
             .subContainer {
                 .subTitle {
-                    font-size: 20px;
+                    font-size: 18px;
                 }
                 .contentContainer{
                     .contentSubContainer{
                         .content {
-                            font-size: 14px;
+                            font-size: 12px;
                         }
                     }
                 }
