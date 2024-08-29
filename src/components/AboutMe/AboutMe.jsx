@@ -23,13 +23,16 @@ import word from '../../assets/images/Softwares/Word.png';
 import googledocs from '../../assets/images/Softwares/Google Docs.png';
 import googlesheets from '../../assets/images/Softwares/Google Sheets.png';
 import googleslides from '../../assets/images/Softwares/Google Slides.png';
+import vscode from '../../assets/images/Softwares/VSCode.png';
+import powerpoint from '../../assets/images/Softwares/PowerPoint.png';
+import photo from '../../assets/images/Profil.png';
 
 const AboutMe = () => {
     return (
         <div className={s.container}>
             <div className={s.subContainerFirst}>
-                <div className={s.subContainerImg}>
-
+                <div>
+                    <img src={photo} alt="photo de profil" className={s.subContainerImg}/>
                 </div>
                 <div className={s.subContainerInfos}>
                     <div className={s.subContainerInfosPlus}>
@@ -84,6 +87,11 @@ const AboutMe = () => {
                         <div className={s.softwareContainer}>
                             <img src={figma} alt="logo Figma" className={s.logo} />
                             <p className={s.softwareName}>Figma</p>
+                            <p className={s.softwareLevel}>Bonne pratique</p>
+                        </div>
+                        <div className={s.softwareContainer}>
+                            <img src={vscode} alt="logo VSCode" className={s.logo} />
+                            <p className={s.softwareName}>Virtual Studio Code</p>
                             <p className={s.softwareLevel}>Bonne pratique</p>
                         </div>
                         <div className={s.softwareContainer}>
@@ -169,6 +177,11 @@ const AboutMe = () => {
                         <div className={s.softwareContainer}>
                             <img src={word} alt="logo Word" className={s.logo} />
                             <p className={s.softwareName}>Word</p>
+                            <p className={s.softwareLevel}>Assez bonne pratique</p>
+                        </div>
+                        <div className={s.softwareContainer}>
+                            <img src={powerpoint} alt="logo PowerPoint" className={s.logo} />
+                            <p className={s.softwareName}>Power Point</p>
                             <p className={s.softwareLevel}>Assez bonne pratique</p>
                         </div>
                         <div className={s.softwareContainer}>

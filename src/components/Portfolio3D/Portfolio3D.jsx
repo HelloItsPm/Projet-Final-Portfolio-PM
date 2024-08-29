@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import s from './style.module.scss'; // Assure-toi que les styles sont bien importés
+import s from './style.module.scss';
 
 const pages = [
     { path: '/qamraynPage', text: 'Qamrayn', backgroundColor: '#E1CF65' },

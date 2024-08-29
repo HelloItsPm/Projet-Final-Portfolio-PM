@@ -5,14 +5,21 @@ import s from './style.module.scss';
 
 const BurgerMenu = ({ onSelectComponent }) => {
     const [isOpen, setIsOpen] = useState(false);
+    const navigate = useNavigate(); // Initialisation de useNavigate
 
     const toggleMenu = () => {
         setIsOpen(!isOpen);
     };
 
-    const handleNavigation = (component) => {
-        onSelectComponent(component);
+    const handleNavigation = (component, path) => {
+        console.log('Navigation triggered:', component, path);
+        if (path) {
+            navigate(path); // Redirige vers une nouvelle route
+        } else {
+            onSelectComponent(component);
+        }
         setIsOpen(false); // Ferme le menu après la navigation
+        navigate('/'); // Redirige vers la page d'accueil
     };
 
     return (
@@ -46,7 +53,7 @@ const BurgerMenu = ({ onSelectComponent }) => {
                     <div className={s.menuItem} onClick={() => handleNavigation('AboutMe')}>
                         <svg width="38" height="43" viewBox="0 0 38 43" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M36.1429 33.4286L30.4286 27.7143C26.7884 27.2381 19.4064 26.2857 19 26.2857L7.57146 27.7143L1.85718 33.4286L4.71432 42H33.2858L36.1429 33.4286Z" stroke="#3DB08D" strokeWidth="2"/>
-                                <path d="M19 2L10.4286 10.5714L19 19.1429L27.5715 10.5714L19 2Z" stroke="#3DB08D" stroke-width="2"/>
+                                <path d="M19 2L10.4286 10.5714L19 19.1429L27.5715 10.5714L19 2Z" stroke="#3DB08D" strokeWidth="2"/>
                         </svg>
                         <p className={s.txt}>À propos</p>
                     </div>

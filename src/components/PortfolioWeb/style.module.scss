@@ -2,13 +2,13 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center; /* Centre les rectangles horizontalement */
-    gap: 16px; /* Espacement entre les rectangles */
-    padding: 20px;
+    gap: 10px; /* Espacement entre les rectangles */
+    margin: -16px;
 }
 
 .rectangle {
-    width: 320px; /* Largeur des rectangles */
-    height: 180px; /* Hauteur des rectangles */
+    width: 288px; /* Largeur des rectangles */
+    height: 162px; /* Hauteur des rectangles */
     background-color: #3DB08D;
     color: #fff;
     display: flex;
