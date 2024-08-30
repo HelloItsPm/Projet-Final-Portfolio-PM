@@ -6,7 +6,7 @@ const RectangleGrid = () => {
     const rectangles = [
         { url: 'https://helloitspm.github.io/MemoryCard/', text: 'Memory Card', backgroundColor: '#E1CF65' },
         { url: 'https://helloitspm.github.io/Pokedex/', text: 'Pokedex', backgroundColor: '#3DB08D' },
-        { url: 'https://www.youtube.com/', text: 'Rectangle 3', backgroundColor: '#FF6F61' },
+        { url: 'https://helloitspm.github.io/Puzzle/', text: 'Puzzle', backgroundColor: '#FF6F61' },
         { url: 'https://www.youtube.com/', text: 'Rectangle 4', backgroundColor: '#6B5B95' },
         { url: 'https://www.youtube.com/', text: 'Rectangle 5', backgroundColor: '#88B04B' },
         { url: 'https://www.youtube.com/', text: 'Rectangle 6', backgroundColor: '#F7B7A3' },
