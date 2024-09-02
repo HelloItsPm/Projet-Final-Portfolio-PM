@@ -28,6 +28,9 @@ const HomeMessage = () => {
                     </motion.div>
                 </div>
             </div>
+            <div className={s.containerButton}>
+
+            </div>
         </div>
     );
 };

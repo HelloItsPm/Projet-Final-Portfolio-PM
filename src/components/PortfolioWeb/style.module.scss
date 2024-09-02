@@ -7,6 +7,7 @@
 }
 
 .rectangle {
+    position: relative; /* Nécessaire pour positionner l'overlay */
     width: 288px; /* Largeur des rectangles */
     height: 162px; /* Hauteur des rectangles */
     background-color: #3DB08D;
@@ -17,10 +18,39 @@
     font-size: 16px;
     cursor: pointer;
     border-radius: 4px;
-    transition: background-color 0.3s, transform 0.3s;
+    overflow: hidden; /* Pour cacher l'overlay en dehors des limites du rectangle */
+    transition: transform 0.3s;
 
     &:hover {
-        background-color: #2A9D8F;
         transform: scale(1.05); /* Zoom léger au survol */
+    }
+
+    /* Overlay pour assombrir l'image */
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5); /* Couche noire transparente */
+        opacity: 0; /* Initialement caché */
+        transition: opacity 0.3s;
+    }
+
+    &:hover::before {
+        opacity: 1; /* Affiche l'overlay au survol */
+    }
+
+    /* Texte à afficher par-dessus */
+    span {
+        position: absolute;
+        opacity: 0; /* Initialement caché */
+        transition: opacity 0.3s;
+        z-index: 1; /* S'assure que le texte est au-dessus de l'overlay */
+    }
+
+    &:hover span {
+        opacity: 1; /* Affiche le texte au survol */
     }
 }

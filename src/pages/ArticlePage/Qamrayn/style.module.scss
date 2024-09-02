@@ -31,6 +31,21 @@
             .containerImgGeneral{
                 width: 100%;
                 height: auto;
+                border-radius: 4px;
+            }
+            .space{
+                display: flex;
+                width: 100%;
+            }
+            .lien{
+                display: flex;
+                justify-content: center;
+                padding: 20px 30px;
+                background-image: linear-gradient(to right, #30524C, #3DB08D);
+                color: #E1CF65;
+                font-size: 20px;
+                border-radius: 32px;
+                width: 100%;
             }
         }
         .containerDescription{
@@ -45,7 +60,8 @@
             }
             .containerSoftware{
                 display: flex;
-                justify-content: space-around;
+                gap: 8px;
+                flex-wrap: wrap;
                 .containerSoftwareGeneral{
                     width: auto;
                     height: 48px;

@@ -16,11 +16,48 @@
     font-size: 16px;
     cursor: pointer;
     border-radius: 8px;
-    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    position: relative; /* Nécessaire pour positionner le texte absolu */
+    overflow: hidden; /* Cache le texte si nécessaire */
+
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s, filter 0.3s;
+
+    /* Masquer le texte par défaut */
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.3); /* Couleur d'assombrissement */
+        opacity: 0; /* Texte masqué par défaut */
+        transition: opacity 0.3s;
+        z-index: 1; /* Au-dessus de l'image */
+    }
+
+    /* Stylisation du texte */
+    .text {
+        position: absolute;
+        color: #fff;
+        font-size: 20px;
+        font-weight: bold;
+        z-index: 2; /* Au-dessus de l'assombrissement */
+        opacity: 0; /* Texte masqué par défaut */
+        transition: opacity 0.3s;
+    }
 
     &:hover {
         background-color: #2A9D8F; /* Couleur de survol */
         transform: scale(1.05); /* Zoom léger au survol */
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre au survol */
+        filter: brightness(0.8); /* Assombrir l'image */
+        
+        &::before {
+            opacity: 1; /* Montrer l'assombrissement au survol */
+        }
+
+        .text {
+            opacity: 1; /* Montrer le texte au survol */
+        }
     }
 }

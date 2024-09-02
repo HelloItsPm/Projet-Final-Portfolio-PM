@@ -1,25 +1,27 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import qamraynthumbnail from '../../assets/images/Portfolio3D/Qamraynthumbnail.png';
+import Chessthumnail from '../../assets/images/Portfolio3D/Chessthumnail.png';
+import Odettethumbnail from '../../assets/images/Portfolio3D/Odettethumbnail.png';
+import Fall_Guysthumbnail from '../../assets/images/Portfolio3D/Fall_Guysthumbnail.png';
+import Partiel2022thumbnail from '../../assets/images/Portfolio3D/Partiel2022thumbnail.png';
+
 import s from './style.module.scss';
 
 const pages = [
-    { path: '/qamraynPage', text: 'Qamrayn', backgroundColor: '#E1CF65' },
-    { path: '/articlePage', text: 'Page 2', backgroundColor: '#3DB08D' },
-    { path: '/articlePage', text: 'Page 3', backgroundColor: '#FF6F61' },
-    { path: '/articlePage', text: 'Page 4', backgroundColor: '#6B5B95' },
-    { path: '/articlePage', text: 'Page 5', backgroundColor: '#88B04B' },
-    { path: '/articlePage', text: 'Page 6', backgroundColor: '#F7B7A3' },
-    { path: '/articlePage', text: 'Page 7', backgroundColor: '#FF9F00' },
-    { path: '/articlePage', text: 'Page 8', backgroundColor: '#D4A5A5' },
-    { path: '/articlePage', text: 'Page 9', backgroundColor: '#8A2BE2' },
-    { path: '/articlePage', text: 'Page 10', backgroundColor: '#FF6347' },
+    { path: '/qamraynPage', text: 'Qamrayn', backgroundImage: `url(${qamraynthumbnail})` },
+    { path: '/chessPage', text: 'Chess', backgroundImage: `url(${Chessthumnail})` },
+    { path: '/odettePage', text: 'Odette', backgroundImage: `url(${Odettethumbnail})` },
+    { path: '/fallGuysPage', text: 'FallGuys', backgroundImage: `url(${Fall_Guysthumbnail})` },
+    { path: '/partielPage', text: 'Partiel', backgroundImage: `url(${Partiel2022thumbnail})` },
+    { path: '/articlePage', text: 'Page Exemple', backgroundColor: '#F7B7A3' },
 ];
 
 const SquareGrid = () => {
     const navigate = useNavigate();
 
     const handleClick = (path) => {
-        navigate(path); // Utilise le hook useNavigate pour rediriger vers la page
+        navigate(path);
     };
 
     return (
@@ -28,10 +30,15 @@ const SquareGrid = () => {
                 <div
                     key={index}
                     className={s.square}
-                    style={{ backgroundColor: page.backgroundColor }}
+                    style={{
+                        backgroundColor: page.backgroundColor,
+                        backgroundImage: page.backgroundImage ? page.backgroundImage : 'none',
+                        backgroundSize: 'cover', // Assurez-vous que l'image couvre tout le carré
+                        backgroundPosition: 'center', // Centrez l'image
+                    }}
                     onClick={() => handleClick(page.path)}
                 >
-                    {page.text}
+                    <div className={s.text}>{page.text}</div>
                 </div>
             ))}
         </div>
@@ -39,3 +46,4 @@ const SquareGrid = () => {
 };
 
 export default SquareGrid;
+
