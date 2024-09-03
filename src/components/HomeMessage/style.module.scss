@@ -49,6 +49,23 @@
             }
         }
     }
+    .containerButton{
+        display: flex;
+        justify-content: end;
+        .portfolioButton {
+            padding: 16px 32px;
+            border-radius: 32px;
+            color: #fff;
+            font-size: 16px;
+            border: transparent;
+            background-image: linear-gradient(to right, #30524C, #3DB08D);
+            transition: background-image 0.3s ease-in-out;
+        
+            &:hover {
+                background-image: linear-gradient(to right, #3DB08D, #EDD580);
+            }
+        }
+    }
 }
 
 

@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import s from './style.module.scss';
 
-const HomeMessage = () => {
+const HomeMessage = ({ onNavigateToPortfolio }) => {
     return (
         <div className={s.container}>
             <p className={s.title}>Hey !</p>
@@ -29,7 +29,9 @@ const HomeMessage = () => {
                 </div>
             </div>
             <div className={s.containerButton}>
-
+                <button className={s.portfolioButton} onClick={onNavigateToPortfolio}>
+                    Accéder au Portfolio
+                </button>
             </div>
         </div>
     );

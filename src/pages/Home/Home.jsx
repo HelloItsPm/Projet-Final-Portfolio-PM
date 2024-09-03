@@ -12,10 +12,15 @@ function Home({ selectedComponent, setSelectedComponent }) {
         setActiveComponent(selectedComponent);
     }, [selectedComponent]);
 
+    const handleNavigateToPortfolio = () => {
+        setActiveComponent('Portfolio');
+        setSelectedComponent('Portfolio');
+    };
+
     const renderComponent = () => {
         switch (activeComponent) {
             case 'HomeMessage':
-                return <HomeMessage />;
+                return <HomeMessage onNavigateToPortfolio={handleNavigateToPortfolio} />;
             case 'Portfolio':
                 return <Portfolio />;
             case 'Resume':
@@ -23,7 +28,7 @@ function Home({ selectedComponent, setSelectedComponent }) {
             case 'AboutMe':
                 return <AboutMe />;
             default:
-                return <HomeMessage />;
+                return <HomeMessage onNavigateToPortfolio={handleNavigateToPortfolio} />;
         }
     };
 
